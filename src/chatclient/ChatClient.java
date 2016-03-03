@@ -55,7 +55,7 @@ public class ChatClient extends JFrame {
         
         
         try{
-            Socket socket = new Socket("localhost", 8008);
+            Socket socket = new Socket("127.0.0.1", 8008);
             OutputHandler outputToServer = new OutputHandler(socket);
             InputHandler inputFromServer = new InputHandler(socket);
             new Thread(inputFromServer).start();
